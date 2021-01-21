@@ -1,2 +1,10 @@
 <h2><%= @author.name %></h2>
 <a href="mailto:<%= @author.email %>"><%= @author.email %></a>
+
+<% if @author.errors.any? %>
+<h2><%= @author.errors.count %> errors </h2>
+<ul>
+<% @author.full_messages.each do |message| %>
+    <li><%= message %></li>
+    </ul>
+    <% end %>
