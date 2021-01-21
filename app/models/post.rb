@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-    belongs_to :auhor
+    belongs_to :author
 
     validates :title, presence: true
     validates :content, length: { minimum: 100 }
